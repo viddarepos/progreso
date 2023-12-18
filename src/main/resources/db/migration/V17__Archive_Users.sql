@@ -1,0 +1,3 @@
+ALTER TABLE account
+ADD COLUMN archived BIT
+DEFAULT 0 NOT NULL;

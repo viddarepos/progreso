@@ -1,0 +1,42 @@
+version: '3.3'
+
+networks:
+  prime:
+    driver: bridge
+
+services:
+  api:
+    container_name: java-api
+    depends_on:
+      - db
+    build: .
+    ports:
+      - "8080:8080"
+    restart: always
+    networks:
+      - prime
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/progreso?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password
+    links:
+      - db:db
+
+  db:
+    container_name: java-api-db
+    image: mysql:8.0.30
+    restart: always
+    networks:
+      - prime
+    environment:
+      MYSQL_DATABASE: 'prime'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:

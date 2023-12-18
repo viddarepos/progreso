@@ -1,0 +1,1 @@
+INSERT INTO account (email, password, role) VALUES ('admin@progreso.com', '$2a$10$rnyVHMYp60f64RE1fwe7BO2fcUeZj2qsMG4SHyzqA0cBZtvAPXOAS', 'ADMIN');

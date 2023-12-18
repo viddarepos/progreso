@@ -1,0 +1,2 @@
+ALTER TABLE user
+ADD COLUMN image_path VARCHAR(255);

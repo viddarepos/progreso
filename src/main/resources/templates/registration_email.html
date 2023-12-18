@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <title>User Password Email</title>
+    <meta name="description" content="User Password Email"/>
+    <style th:replace="fragment/email_style :: style"></style>
+</head>
+
+<body>
+<!--100% body table-->
+<table class="outer-table" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <table
+                    class="inside-table"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+            >
+                <tr>
+                    <td height="80px">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">
+                        <div>
+                            <img
+                                    src="https://res.cloudinary.com/dpfsw7lxa/image/upload/v1680264743/logo_wwckx6_1_aqeief.png"
+                                    alt="logo"
+                            />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <table
+                                class="inner-table"
+                                align="center"
+                                cellpadding="0"
+                                cellspacing="0"
+                        >
+                            <tr>
+                                <td height="40px">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 35px">
+                                    <h1>Hello,
+                                        <th:block th:text="${fullName}"></th:block>
+                                    </h1>
+                                    <span></span>
+                                    <p class="welcome-message">
+                                        Welcome to the Progreso app. Your password is:
+                                        <th:block th:text="${password}"></th:block>
+                                    </p>
+                                    <a href="https://int-team.protal.biz/progreso/dev/react-app" class="button">Log in</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="40px">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td height="20px">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">
+                        <p class="copyright">
+                            &copy; <strong>www.primeholding.com</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="80px">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!--/100% body table-->
+</body>
+</html>
